@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #FDF7F2;
+    --bg-card: #FFFFFF;
+    --bg-soft: #F9EFE7;
+    --brand-pink: #E8A0BF;
+    --brand-rose: #C57B85;
+    --brand-dark: #4A3337;
+    --brand-gold: #D4A853;
+    --brand-text-muted: #8E7276;
+    --border-color: #F3E5DC;
+  }
+
+  .dark {
+    --bg-main: #181214;
+    --bg-card: #251D20;
+    --bg-soft: #302629;
+    --brand-pink: #E8A0BF;
+    --brand-rose: #F0A8B2;
+    --brand-dark: #F7EFE9;
+    --brand-gold: #E5BB67;
+    --brand-text-muted: #BFA9AC;
+    --border-color: #382A2D;
+  }
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--brand-dark);
+  font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  direction: rtl;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--brand-pink);
+  border-radius: 999px;
+}
+
+/* Soft luxury glass blur */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.dark .glass-effect {
+  background: rgba(37, 29, 32, 0.8);
+  backdrop-filter: blur(12px);
+}
+
+/* Luxury Card Shadow */
+.card-shadow {
+  box-shadow: 0 10px 30px -10px rgba(197, 123, 133, 0.12);
+}
+
+/* Sparkle Animation */
+@keyframes sparkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+.animate-sparkle {
+  animation: sparkle 2.5s infinite ease-in-out;
+}

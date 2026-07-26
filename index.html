@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Softy Crafts — Feminine Luxury Flower Store</title>
+  <meta name="description" content="Handcrafted bouquets designed to create unforgettable memories. Premium floral boutique experience." />
+
+  <!-- Google Fonts: Playfair Display, Manrope, Aref Ruqaa, IBM Plex Sans Arabic, Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Console Warning Filter for Tailwind CDN -->
+  <script>
+    (function(){
+      var _warn = console.warn;
+      console.warn = function() {
+        if (arguments[0] && typeof arguments[0] === 'string' && arguments[0].indexOf('cdn.tailwindcss.com') !== -1) return;
+        _warn.apply(console, arguments);
+      };
+    })();
+  </script>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bgMain: '#FFF9F7',
+            surface: '#FFFFFF',
+            primary: '#E8B4C7',
+            secondary: '#D98FA5',
+            accentGold: '#C8A96A',
+            textPrimary: '#3A2E2E',
+            textSecondary: '#7D7272',
+            borderSubtle: '#F2E7E9',
+            brand: {
+              50:  '#FFF5F8',
+              100: '#FCE7F0',
+              200: '#FBCFE8',
+              300: '#F9A8D4',
+              400: '#E8B4C7',
+              500: '#D98FA5',
+              600: '#C27489',
+              700: '#A85C6F',
+              800: '#884952',
+              900: '#703A41',
+            },
+          },
+          fontFamily: {
+            playfair: ['Playfair Display', 'serif'],
+            aref: ['Aref Ruqaa', 'serif'],
+            manrope: ['Manrope', 'sans-serif'],
+            sans: ['IBM Plex Sans Arabic', 'Cairo', 'sans-serif'],
+          },
+          borderRadius: {
+            'card': '24px',
+            'btn': '16px',
+            'input': '14px',
+            'img': '24px',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Native CSS Fallbacks for 100% Guarantee on file:// & Offline Browsers */
+    .hidden {
+      display: none !important;
+    }
+    html {
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+    body {
+      font-family: 'IBM Plex Sans Arabic', 'Cairo', 'Manrope', sans-serif;
+      background-color: #FFF9F7;
+      color: #3A2E2E;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    .font-aref {
+      font-family: 'Aref Ruqaa', serif;
+    }
+    .font-playfair {
+      font-family: 'Playfair Display', serif;
+    }
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid #F2E7E9;
+    }
+    /* Brand Color Fallbacks */
+    .text-brand-900 { color: #703A41 !important; }
+    .text-brand-700 { color: #A85C6F !important; }
+    .text-brand-500 { color: #D98FA5 !important; }
+    .bg-brand-500 { background-color: #D98FA5 !important; }
+    .bg-brand-900 { background-color: #703A41 !important; }
+    .bg-brand-50 { background-color: #FFF5F8 !important; }
+    .border-brand-200 { border-color: #FBCFE8 !important; }
+
+    /* Subtle 250ms Transitions */
+    .transition-smooth {
+      transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    /* Hover scale 1.04 */
+    .hover-scale:hover {
+      transform: scale(1.04);
+    }
+    /* Infinite Smooth Marquee Animation */
+    @keyframes marquee {
+      0% { transform: translate3d(0, 0, 0); }
+      100% { transform: translate3d(-50%, 0, 0); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: max-content;
+      will-change: transform;
+      animation: marquee 35s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+
+    /* Mobile Sticky Bottom Bar */
+    .mobile-sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid #F2E7E9;
+      padding: 12px 16px;
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.06);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary selection:text-white relative pb-12">
+
+  <!-- 1. Announcement Bar -->
+  <div class="bg-[#703A41] text-white text-[11px] sm:text-xs font-semibold py-2 px-4 text-center tracking-wide">
+    توصيل لجميع المحافظات | خصم 15% على البوكيهات الكبيرة بالكود: <span class="font-mono text-[#F9A8D4] font-bold">SOFTY15</span>
+  </div>
+
+  <!-- 2. Header & Navigation (Clean Minimalist Shopify Navbar with Mobile Menu) -->
+  <header class="sticky top-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Right: Brand Logo & Name -->
+        <a href="#" class="flex items-center gap-3">
+          <img src="public/logo.jpg" alt="Softy Crafts Logo" class="w-10 h-10 rounded-full object-cover border border-brand-200 shadow-xs" />
+          <span class="text-xl font-bold tracking-tight text-brand-900 font-outfit">Softy Crafts</span>
+        </a>
+
+        <!-- Center: Nav Links (Desktop) -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-700">
+          <a href="#" class="text-brand-500 font-extrabold border-b-2 border-brand-500 pb-1">الرئيسية</a>
+          <a href="#products" class="hover:text-brand-500 transition-colors">البوكيهات</a>
+          <a href="#categories" class="hover:text-brand-500 transition-colors">الأقسام</a>
+          <a href="#why-us" class="hover:text-brand-500 transition-colors">لماذا نحن</a>
+          <a href="#reviews" class="hover:text-brand-500 transition-colors">آراء العملاء</a>
+        </nav>
+
+        <!-- Left: Action Icons & Mobile Hamburger -->
+        <div class="flex items-center gap-2 sm:gap-4">
+          <!-- Search -->
+          <button onclick="var si = document.getElementById('searchInput'); if(si) si.focus();" class="w-11 h-11 flex items-center justify-center text-gray-700 hover:text-brand-500 transition-colors rounded-full hover:bg-gray-100/60" aria-label="بحث">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </button>
+          <span id="wishlistCount" class="hidden">0</span>
+
+          <!-- Cart Drawer Trigger -->
+          <button onclick="toggleCartDrawer()" class="w-11 h-11 relative flex items-center justify-center text-gray-700 hover:text-brand-500 transition-colors rounded-full hover:bg-gray-100/60" aria-label="السلة">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+            <span id="cartCount" class="absolute -top-1 -right-1 bg-[#884952] text-white text-[11px] font-bold w-5 h-5 flex items-center justify-center rounded-full shadow-xs">0</span>
+          </button>
+
+          <!-- Mobile Hamburger Button -->
+          <button onclick="toggleMobileMenu()" class="w-11 h-11 md:hidden flex items-center justify-center text-gray-700 hover:text-brand-500 transition-colors rounded-full hover:bg-gray-100/60" aria-label="القائمة">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Full-Screen Mobile Overlay Menu -->
+  <div id="mobileMenu" class="fixed inset-0 z-50 hidden transition-all duration-300" style="display: none;">
+    <div onclick="toggleMobileMenu()" class="absolute inset-0 bg-black/40 backdrop-blur-md"></div>
+    <div class="relative bg-white/95 backdrop-blur-2xl w-full max-w-sm h-full p-6 shadow-2xl flex flex-col justify-between z-10 text-right">
+      <div class="space-y-6">
+        <div class="flex items-center justify-between border-b border-[#F2E7E9] pb-4">
+          <div class="flex items-center gap-3">
+            <img src="public/logo.jpg" alt="Logo" class="w-10 h-10 rounded-full object-cover">
+            <span class="font-bold text-lg text-[#3A2E2E]">Softy Crafts</span>
+          </div>
+          <button onclick="toggleMobileMenu()" class="w-10 h-10 flex items-center justify-center text-gray-500 hover:text-gray-900 rounded-full bg-gray-100 font-bold">✕</button>
+        </div>
+
+        <nav class="flex flex-col space-y-2">
+          <a href="#" onclick="toggleMobileMenu()" class="min-h-[48px] flex items-center px-4 rounded-2xl font-bold text-sm text-[#703A41] bg-[#FCE7F0]">الرئيسية</a>
+          <a href="#products" onclick="toggleMobileMenu()" class="min-h-[48px] flex items-center px-4 rounded-2xl font-semibold text-sm text-[#3A2E2E] hover:bg-gray-50">البوكيهات المميزة</a>
+          <a href="#categories" onclick="toggleMobileMenu()" class="min-h-[48px] flex items-center px-4 rounded-2xl font-semibold text-sm text-[#3A2E2E] hover:bg-gray-50">الأقسام للأحجام</a>
+          <a href="#why-us" onclick="toggleMobileMenu()" class="min-h-[48px] flex items-center px-4 rounded-2xl font-semibold text-sm text-[#3A2E2E] hover:bg-gray-50">لماذا نحن</a>
+          <a href="#reviews" onclick="toggleMobileMenu()" class="min-h-[48px] flex items-center px-4 rounded-2xl font-semibold text-sm text-[#3A2E2E] hover:bg-gray-50">آراء البنوتات والعملاء</a>
+        </nav>
+      </div>
+
+      <div class="space-y-3 pt-6 border-t border-[#F2E7E9]">
+        <a href="https://wa.me/201065081331?text=%D9%8A%D8%A7%20%D9%87%D9%84%D8%A7%20Softy%20Crafts%20%F0%9F%8C%B8%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%A8%D9%88%D9%83%D9%8A%D9%87%20%D8%AE%D8%A7%D8%B5" target="_blank" class="w-full min-h-[50px] bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm rounded-2xl flex items-center justify-center gap-2 shadow-md">
+          <span>طلب عبر الواتساب مباشر</span>
+          <span class="text-base">💬</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Hero Section (Clean Feminine Luxury Showcase) -->
+  <section class="py-8 sm:py-16 px-4 sm:px-6 max-w-7xl mx-auto">
+    <div class="bg-white rounded-3xl border border-[#F2E7E9] p-5 sm:p-8 md:p-12 shadow-lg grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center">
+      
+      <!-- Text & Calligraphy Content Column -->
+      <div class="space-y-4 sm:space-y-6 text-right order-2 md:order-1">
+        
+        <!-- Top Luxury Badge -->
+        <span class="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-[#FCE7F0] border border-[#FBCFE8] text-[#884952] text-[11px] sm:text-xs font-bold">
+          🌸 المكان الأفضل لأجمل بوكيهات الورد القطيفة الهاند ميد
+        </span>
+
+        <!-- Authentic Calligraphy Title -->
+        <h1 class="font-aref text-3xl sm:text-5xl md:text-6xl font-normal text-[#703A41] leading-tight">
+          صُنِعَت بكل حب
+        </h1>
+
+        <p class="text-sm sm:text-base text-[#582B31] font-semibold leading-relaxed">
+          بوكيهات ورد سلك القطيفة المصنوعة يدويًا بحرفية ودقة متناهية لتصنع لكِ أجمل الذكريات وتدوم للأبد. الأسعار متفاوته وتعتمد على التخصيص والحجم.
+        </p>
+
+        <div class="pt-2 sm:pt-4">
+          <a href="#products" class="block sm:inline-block text-center py-3.5 sm:py-4 px-8 sm:px-10 bg-[#884952] hover:bg-[#703A41] text-white text-xs font-bold tracking-widest uppercase rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+            تسوقي البوكيهات الآن 🌸
+          </a>
+        </div>
+
+        <!-- Feature Strip below Hero Text -->
+        <div class="grid grid-cols-3 gap-3 sm:gap-4 pt-4 sm:pt-6 border-t border-[#F2E7E9] text-[11px] sm:text-xs text-[#703A41]">
+          <div class="text-center sm:text-right">
+            <span class="block font-bold mb-0.5">صنع يدوياً 100%</span>
+            <span class="text-[10px] sm:text-[11px] text-[#884952]/80">خامات سلك قطيفة</span>
+          </div>
+          <div class="text-center sm:text-right">
+            <span class="block font-bold mb-0.5">تغليف هدايا مجاني</span>
+            <span class="text-[10px] sm:text-[11px] text-[#884952]/80">كرافت وكارت إهداء</span>
+          </div>
+          <div class="text-center sm:text-right">
+            <span class="block font-bold mb-0.5">توصيل لكل المحافظات</span>
+            <span class="text-[10px] sm:text-[11px] text-[#884952]/80">شحن سريع وآمن</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Photo Showcase Column -->
+      <div class="relative rounded-2xl overflow-hidden shadow-xl border border-[#F2E7E9] group order-1 md:order-2">
+        <img src="public/hero/custom_hero.jpg" alt="Softy Crafts Luxury Bouquet Banner" class="w-full h-56 sm:h-72 md:h-auto md:max-h-[500px] object-cover rounded-xl group-hover:scale-[1.02] transition-all duration-500">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3.5 Animated Bouquet Carousel Banner (Right After Hero) -->
+  <section class="py-8 sm:py-16 px-4 sm:px-6 max-w-7xl mx-auto overflow-hidden">
+    <div class="text-center mb-6 sm:mb-8 space-y-2">
+      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FCE7F0] text-[#703A41] text-[11px] sm:text-xs font-bold border border-[#FBCFE8]">
+        ✨ Softy Crafts Exclusive Collection ✨
+      </span>
+      <h2 class="font-aref text-2xl sm:text-3xl md:text-5xl font-normal text-[#703A41] tracking-wide pt-1">
+        تشكيلة بوكيهات Softy Crafts الجديدة
+      </h2>
+      <div class="w-16 h-0.5 bg-[#D98FA5] mx-auto rounded-full mt-2"></div>
+    </div>
+
+    <div class="relative rounded-3xl bg-white border border-brand-200 p-4 shadow-lg overflow-hidden">
+      <!-- Carousel Slider Container (100% Gapless Endless Marquee) -->
+      <div class="overflow-hidden relative rounded-2xl w-full" dir="ltr">
+        <div class="animate-marquee flex gap-6 items-center w-max">
+          
+          <!-- Group A (All 9 Bouquet Photos) -->
+          <div class="w-72 shrink-0 relative rounded-2xl overflow-hidden shadow-sm group">
+            <img src="public/banner/banner1.jpg" alt="بوكيه توليب وردي بالدبدوب" class="w-full h-80 object-cover group-hover:scale-105 transition-all duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 right-4 left-4 text-white text-right">
+              <span class="text-xs font-bold bg-[#884952]/80 backdrop-blur-md px-3 py-1 rounded-full text-white inline-block mb-1">بوكيه تخرج وردي</span>
+            </div>
+          </div>
+
+          <div class="w-72 shrink-0 relative rounded-2xl overflow-hidden shadow-sm group">
+            <img src="public/banner/banner2.jpg" alt="بوكيه عنابي وشريط أحمر" class="w-full h-80 object-cover group-hover:scale-105 transition-all duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 right-4 left-4 text-white text-right">
+              <span class="text-xs font-bold bg-[#884952]/80 backdrop-blur-md px-3 py-1 rounded-full text-white inline-block mb-1">بوكيه تخرج أسود وعنابي</span>
+            </div>
+          </div>
+
+          <div class="w-72 shrink-0 relative rounded-2xl overflow-hidden shadow-sm group">
+            <img src="public/banner/banner3.jpg" alt="بوكيه التوليب العنابي الملكي" class="w-full h-80 object-cover group-hover:scale-105 transition-all duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 right-4 left-4 text-white text-right">
+              <span class="text-xs font-bold bg-[#884952]/80 backdrop-blur-md px-3 py-1 rounded-full text-white inline-block mb-1">بوكيه الورد العنابي باللؤلؤ</span>
+            </div>
+          </div>
+
+          <div class="w-72 shrink-0 relative rounded-2xl overflow-hidden shadow-sm group">
+            <img src="public/banner/banner4.jpg" alt="بوكيه وردة وردية مفردة" class="w-full h-80 object-cover group-hover:scale-105 transition-all duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 right-4 left-4 text-white text-right">
+              <span class="text-xs font-bold bg-[#884952]/80 backdrop-blur-md px-3 py-1 rounded-full text-white inline-block mb-1">بوكيه وردي رقيق هاند ميد</span>
+            </div>
+          </div>
+
+          <div class="w-72 shrink-0 relative rounded-2xl overflow-hidden shadow-sm group">
+            <img src="public/banner/banner5.jpg" alt="بوكيه الدبدوب مع الدانتيل" class="w-full h-80 object-cover group-hover:scale-105 transition-all duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 right-4 left-4 text-white text-right">
+              <span class="text-xs font-bold bg-[#884952]/80 backdrop-blur-md px-3 py-1 rounded-full text-white inline-block mb-1">بوكيه دانتيل بالدبدوب</span>
+            </div>
+          </div>
+
+          <div class="w-72 shrink-0 relative rounded-2xl overflow-hidden shadow-sm group">
+            <img src="public/banner/banner6.jpg" alt="بوكيه التخرج الوردي بالصندوق" class="w-full h-80 object-cover group-hover:scale-105 transition-all duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 right-4 left-4 text-white text-right">
+              <span class="text-xs font-bold bg-[#884952]/80 backdrop-blur-md px-3 py-1 rounded-full text-white inline-block mb-1">بوكيه صندوق التخرج</span>
+            </div>
+          </div>
+
+          <div class="w-72 shrink-0 relative rounded-2xl overflow-hidden shadow-sm group">
+            <img src="public/banner/banner7.jpg" alt="بوكيه التوليب الوردي المزدوج" class="w-full h-80 object-cover group-hover:scale-105 transition-all duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 right-4 left-4 text-white text-right">
+              <span class="text-xs font-bold bg-[#884952]/80 backdrop-blur-md px-3 py-1 rounded-full text-white inline-block mb-1">بوكيه التوليب الوردي</span>
+            </div>
+          </div>
+
+          <div class="w-72 shrink-0 relative rounded-2xl overflow-hidden shadow-sm group">
+            <img src="public/banner/banner8.jpg" alt="بوكيه التوليب الوردي مع كارت الفنون" class="w-full h-80 object-cover group-hover:scale-105 transition-all duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 right-4 left-4 text-white text-right">
+              <span class="text-xs font-bold bg-[#884952]/80 backdrop-blur-md px-3 py-1 rounded-full text-white inline-block mb-1">بوكيه فني وردي</span>
+            </div>
+          </div>
+
+          <div class="w-72 shrink-0 relative rounded-2xl overflow-hidden shadow-sm group">
+            <img src="public/banner/banner9.jpg" alt="بوكيه تخرج وردي ملكي" class="w-full h-80 object-cover group-hover:scale-105 transition-all duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 right-4 left-4 text-white text-right">
+              <span class="text-xs font-bold bg-[#884952]/80 backdrop-blur-md px-3 py-1 rounded-full text-white inline-block mb-1">بوكيه التخرج الفاخر</span>
+            </div>
+          </div>
+
+          <!-- Group B (Exact Duplicate for Continuous Seamless Scroll) -->
+          <div class="w-72 shrink-0 relative rounded-2xl overflow-hidden shadow-sm group">
+            <img src="public/banner/banner1.jpg" alt="بوكيه توليب وردي بالدبدوب" class="w-full h-80 object-cover group-hover:scale-105 transition-all duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 right-4 left-4 text-white text-right">
+              <span class="text-xs font-bold bg-[#884952]/80 backdrop-blur-md px-3 py-1 rounded-full text-white inline-block mb-1">بوكيه تخرج وردي</span>
+            </div>
+          </div>
+
+          <div class="w-72 shrink-0 relative rounded-2xl overflow-hidden shadow-sm group">
+            <img src="public/banner/banner2.jpg" alt="بوكيه عنابي وشريط أحمر" class="w-full h-80 object-cover group-hover:scale-105 transition-all duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 right-4 left-4 text-white text-right">
+              <span class="text-xs font-bold bg-[#884952]/80 backdrop-blur-md px-3 py-1 rounded-full text-white inline-block mb-1">بوكيه تخرج أسود وعنابي</span>
+            </div>
+          </div>
+
+          <div class="w-72 shrink-0 relative rounded-2xl overflow-hidden shadow-sm group">
+            <img src="public/banner/banner3.jpg" alt="بوكيه التوليب العنابي الملكي" class="w-full h-80 object-cover group-hover:scale-105 transition-all duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 right-4 left-4 text-white text-right">
+              <span class="text-xs font-bold bg-[#884952]/80 backdrop-blur-md px-3 py-1 rounded-full text-white inline-block mb-1">بوكيه الورد العنابي باللؤلؤ</span>
+            </div>
+          </div>
+
+          <div class="w-72 shrink-0 relative rounded-2xl overflow-hidden shadow-sm group">
+            <img src="public/banner/banner4.jpg" alt="بوكيه وردة وردية مفردة" class="w-full h-80 object-cover group-hover:scale-105 transition-all duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 right-4 left-4 text-white text-right">
+              <span class="text-xs font-bold bg-[#884952]/80 backdrop-blur-md px-3 py-1 rounded-full text-white inline-block mb-1">بوكيه وردي رقيق هاند ميد</span>
+            </div>
+          </div>
+
+          <div class="w-72 shrink-0 relative rounded-2xl overflow-hidden shadow-sm group">
+            <img src="public/banner/banner5.jpg" alt="بوكيه الدبدوب مع الدانتيل" class="w-full h-80 object-cover group-hover:scale-105 transition-all duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 right-4 left-4 text-white text-right">
+              <span class="text-xs font-bold bg-[#884952]/80 backdrop-blur-md px-3 py-1 rounded-full text-white inline-block mb-1">بوكيه دانتيل بالدبدوب</span>
+            </div>
+          </div>
+
+          <div class="w-72 shrink-0 relative rounded-2xl overflow-hidden shadow-sm group">
+            <img src="public/banner/banner6.jpg" alt="بوكيه التخرج الوردي بالصندوق" class="w-full h-80 object-cover group-hover:scale-105 transition-all duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 right-4 left-4 text-white text-right">
+              <span class="text-xs font-bold bg-[#884952]/80 backdrop-blur-md px-3 py-1 rounded-full text-white inline-block mb-1">بوكيه صندوق التخرج</span>
+            </div>
+          </div>
+
+          <div class="w-72 shrink-0 relative rounded-2xl overflow-hidden shadow-sm group">
+            <img src="public/banner/banner7.jpg" alt="بوكيه التوليب الوردي المزدوج" class="w-full h-80 object-cover group-hover:scale-105 transition-all duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 right-4 left-4 text-white text-right">
+              <span class="text-xs font-bold bg-[#884952]/80 backdrop-blur-md px-3 py-1 rounded-full text-white inline-block mb-1">بوكيه التوليب الوردي</span>
+            </div>
+          </div>
+
+          <div class="w-72 shrink-0 relative rounded-2xl overflow-hidden shadow-sm group">
+            <img src="public/banner/banner8.jpg" alt="بوكيه التوليب الوردي مع كارت الفنون" class="w-full h-80 object-cover group-hover:scale-105 transition-all duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 right-4 left-4 text-white text-right">
+              <span class="text-xs font-bold bg-[#884952]/80 backdrop-blur-md px-3 py-1 rounded-full text-white inline-block mb-1">بوكيه فني وردي</span>
+            </div>
+          </div>
+
+          <div class="w-72 shrink-0 relative rounded-2xl overflow-hidden shadow-sm group">
+            <img src="public/banner/banner9.jpg" alt="بوكيه تخرج وردي ملكي" class="w-full h-80 object-cover group-hover:scale-105 transition-all duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 right-4 left-4 text-white text-right">
+              <span class="text-xs font-bold bg-[#884952]/80 backdrop-blur-md px-3 py-1 rounded-full text-white inline-block mb-1">بوكيه التخرج الفاخر</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Featured Categories Section -->
+  <section id="categories" class="py-8 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+      <h2 class="text-2xl sm:text-3xl font-bold text-brand-900 mb-2">تصفحي حسب القسم</h2>
+      <p class="text-gray-600 font-medium text-sm">اختاري الفئة المناسبة مع تنوع كامل في الأحجام والأسعار</p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+      
+      <!-- Category 1 -->
+      <div onclick="filterCategory('small')" class="bg-white rounded-2xl p-3 sm:p-5 border border-brand-200 shadow-sm hover:shadow-md transition-all cursor-pointer group">
+        <div class="relative h-32 sm:h-48 rounded-xl overflow-hidden mb-3 sm:mb-4">
+          <img src="public/WhatsApp_Image_2026-07-25_at_12.03.07_202607251431.jpeg" alt="Small Bouquets" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+          <span class="absolute top-2 right-2 sm:top-3 sm:right-3 bg-brand-500 text-white text-[10px] font-bold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full">تبدأ من 150ج</span>
+        </div>
+        <h3 class="text-sm sm:text-base font-bold text-brand-900 mb-1">بوكيهات صغيرة</h3>
+        <p class="text-[10px] sm:text-xs text-gray-500 mb-3 sm:mb-4 font-medium">مناسبة للهدايا اللطيفة</p>
+        <button class="w-full py-2 sm:py-2.5 rounded-lg bg-brand-50 text-brand-600 font-bold text-[11px] sm:text-xs group-hover:bg-brand-500 group-hover:text-white transition-all">
+          عرض البوكيهات
+        </button>
+      </div>
+
+      <!-- Category 2 -->
+      <div onclick="filterCategory('medium')" class="bg-white rounded-2xl p-3 sm:p-5 border border-brand-200 shadow-sm hover:shadow-md transition-all cursor-pointer group">
+        <div class="relative h-32 sm:h-48 rounded-xl overflow-hidden mb-3 sm:mb-4">
+          <img src="public/WhatsApp_Image_2026-07-25_at_12.03.07_202607251429.jpeg" alt="Medium Bouquets" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+          <span class="absolute top-2 right-2 sm:top-3 sm:right-3 bg-brand-500 text-white text-[10px] font-bold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full">تبدأ من 250ج</span>
+        </div>
+        <h3 class="text-sm sm:text-base font-bold text-brand-900 mb-1">بوكيهات متوسطة</h3>
+        <p class="text-[10px] sm:text-xs text-gray-500 mb-3 sm:mb-4 font-medium">أناقة وفخامة مثالية</p>
+        <button class="w-full py-2 sm:py-2.5 rounded-lg bg-brand-50 text-brand-600 font-bold text-[11px] sm:text-xs group-hover:bg-brand-500 group-hover:text-white transition-all">
+          عرض البوكيهات
+        </button>
+      </div>
+
+      <!-- Category 3 -->
+      <div onclick="filterCategory('large')" class="bg-white rounded-2xl p-3 sm:p-5 border border-brand-200 shadow-sm hover:shadow-md transition-all cursor-pointer group">
+        <div class="relative h-32 sm:h-48 rounded-xl overflow-hidden mb-3 sm:mb-4">
+          <img src="public/WhatsApp_Image_2026-07-25_at_12.03.07_202607251434.jpeg" alt="Large Bouquets" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+          <span class="absolute top-2 right-2 sm:top-3 sm:right-3 bg-brand-700 text-white text-[10px] font-bold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full">تبدأ من 400ج</span>
+        </div>
+        <h3 class="text-sm sm:text-base font-bold text-brand-900 mb-1">بوكيهات كبيرة</h3>
+        <p class="text-[10px] sm:text-xs text-gray-500 mb-3 sm:mb-4 font-medium">للمناسبات الخاصة جداً</p>
+        <button class="w-full py-2 sm:py-2.5 rounded-lg bg-brand-50 text-brand-600 font-bold text-[11px] sm:text-xs group-hover:bg-brand-500 group-hover:text-white transition-all">
+          عرض البوكيهات
+        </button>
+      </div>
+
+      <!-- Category 4 -->
+      <div onclick="filterCategory('custom')" class="bg-white rounded-2xl p-3 sm:p-5 border border-brand-200 shadow-sm hover:shadow-md transition-all cursor-pointer group">
+        <div class="relative h-32 sm:h-48 rounded-xl overflow-hidden mb-3 sm:mb-4">
+          <img src="public/WhatsApp_Image_2026-07-25_at_12.03.07_202607251425.jpeg" alt="Custom Graduation" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+          <span class="absolute top-2 right-2 sm:top-3 sm:right-3 bg-brand-900 text-white text-[10px] font-bold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full">حسب اختيارك</span>
+        </div>
+        <h3 class="text-sm sm:text-base font-bold text-brand-900 mb-1">تخرج ومخصصة</h3>
+        <p class="text-[10px] sm:text-xs text-gray-500 mb-3 sm:mb-4 font-medium">صممي بوكيه أحلامك</p>
+        <button class="w-full py-2 sm:py-2.5 rounded-lg bg-brand-50 text-brand-600 font-bold text-[11px] sm:text-xs group-hover:bg-brand-500 group-hover:text-white transition-all">
+          عرض البوكيهات
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. Promotional Discount Banner -->
+  <section class="py-8 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="relative rounded-3xl overflow-hidden bg-gradient-to-r from-[#FCE7F0] via-[#FFF5F8] to-[#FCE7F0] border border-[#FBCFE8] p-8 md:p-12 shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="max-w-xl z-10 text-center md:text-right space-y-4">
+        <span class="inline-block px-3.5 py-1 bg-white text-[#884952] text-xs font-bold rounded-full border border-[#FBCFE8]">
+          عرض خاص لفترة محدودة
+        </span>
+        <h3 class="text-2xl md:text-3xl font-extrabold text-[#703A41] leading-snug">
+          خصم 15% على جميع البوكيهات الكبيرة!
+        </h3>
+        <p class="text-xs md:text-sm text-[#582B31] font-medium leading-relaxed">
+          استخدمي كود الخصم <span class="font-mono bg-white px-3 py-1 rounded-lg font-bold text-[#884952] border border-[#FBCFE8] inline-block my-1">SOFTY15</span> عند إتمام طلبك واحصلي على تغليف كرافت أنيق وكارت إهداء مجاني.
+        </p>
+        <div class="pt-2">
+          <button onclick="copyPromoCode()" class="py-3 px-8 bg-[#884952] hover:bg-[#703A41] text-white font-bold text-xs rounded-full shadow-sm hover:shadow-md transition-all">
+            نسخ كود الخصم واستخدامه
+          </button>
+        </div>
+      </div>
+      <div class="relative w-48 h-48 rounded-2xl overflow-hidden shrink-0 shadow-md border-4 border-white">
+        <img src="public/WhatsApp_Image_2026-07-25_at_12.03.07_202607251425.jpeg" alt="Promo Gift" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Products Showcase Section -->
+  <section id="products" class="py-8 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 gap-4">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-brand-900 mb-2">أحدث البوكيهات المميزة</h2>
+        <p class="text-gray-600 font-medium text-sm">استكشفي التشكيلة المصنوعة يدوياً خصيصاً لك</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="flex flex-wrap gap-2">
+        <button onclick="filterCategory('all')" id="btn-all" class="cat-filter-btn px-3 sm:px-4 py-2 rounded-full text-[11px] sm:text-xs font-bold bg-brand-500 text-white shadow-sm transition-all">الكل</button>
+        <button onclick="filterCategory('small')" id="btn-small" class="cat-filter-btn px-3 sm:px-4 py-2 rounded-full text-[11px] sm:text-xs font-bold bg-white text-gray-700 hover:bg-brand-50 border border-brand-200 transition-all">صغيرة (150ج+)</button>
+        <button onclick="filterCategory('medium')" id="btn-medium" class="cat-filter-btn px-3 sm:px-4 py-2 rounded-full text-[11px] sm:text-xs font-bold bg-white text-gray-700 hover:bg-brand-50 border border-brand-200 transition-all">متوسطة (250ج+)</button>
+        <button onclick="filterCategory('large')" id="btn-large" class="cat-filter-btn px-3 sm:px-4 py-2 rounded-full text-[11px] sm:text-xs font-bold bg-white text-gray-700 hover:bg-brand-50 border border-brand-200 transition-all">كبيرة (400ج+)</button>
+        <button onclick="filterCategory('custom')" id="btn-custom" class="cat-filter-btn px-3 sm:px-4 py-2 rounded-full text-[11px] sm:text-xs font-bold bg-white text-gray-700 hover:bg-brand-50 border border-brand-200 transition-all">تخرج ومخصصة</button>
+      </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div id="productGrid" class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
+      <!-- Dynamic products injected by JS -->
+    </div>
+  </section>
+
+  <!-- 7. Why Choose Us Section -->
+  <section id="why-us" class="py-8 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="bg-white rounded-3xl p-5 sm:p-8 md:p-12 border border-brand-200 shadow-sm">
+      <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
+        <span class="text-[11px] sm:text-xs font-bold text-brand-500 uppercase tracking-widest block mb-2">مميزات سوفتي كرافتس</span>
+        <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-brand-900">لماذا تختارين ورد سلك القطيفة من سوفتي كرافتس؟</h2>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+        
+        <div class="space-y-2 text-center p-3 sm:p-5 rounded-2xl bg-brand-50/60">
+          <h3 class="text-xs sm:text-base font-bold text-brand-900">Forever Bloom</h3>
+          <p class="text-[10px] sm:text-xs text-gray-600 leading-relaxed font-medium">بوكيهاتنا بتفضل بنفس ألوانها وجمالها لسنين.</p>
+        </div>
+
+        <div class="space-y-2 text-center p-3 sm:p-5 rounded-2xl bg-brand-50/60">
+          <h3 class="text-xs sm:text-base font-bold text-brand-900">صنع يدوياً بحرفية</h3>
+          <p class="text-[10px] sm:text-xs text-gray-600 leading-relaxed font-medium">كل وردة تصنع يدوياً باهتمام بأدق التفاصيل.</p>
+        </div>
+
+        <div class="space-y-2 text-center p-3 sm:p-5 rounded-2xl bg-brand-50/60">
+          <h3 class="text-xs sm:text-base font-bold text-brand-900">تغليف فاخر مجاني</h3>
+          <p class="text-[10px] sm:text-xs text-gray-600 leading-relaxed font-medium">تغليف كرافت أنيق مع كارت إهداء مجاني.</p>
+        </div>
+
+        <div class="space-y-2 text-center p-3 sm:p-5 rounded-2xl bg-brand-50/60">
+          <h3 class="text-xs sm:text-base font-bold text-brand-900">توصيل سريع</h3>
+          <p class="text-[10px] sm:text-xs text-gray-600 leading-relaxed font-medium">خيارات متعددة تبدأ من 150 جنيه وتوصيل لكافة المحافظات.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 7.5 Size & Transparent Pricing Notice Banner -->
+  <section class="py-8 sm:py-16 px-4 sm:px-6 max-w-7xl mx-auto">
+    <div class="bg-gradient-to-b from-[#FFF9F7] via-white to-[#FFF9F7] rounded-3xl border border-[#F2E7E9] p-8 sm:p-12 shadow-lg text-center space-y-8">
+      
+      <div class="space-y-3 max-w-3xl mx-auto">
+        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FCE7F0] text-[#703A41] text-xs font-bold border border-[#FBCFE8] shadow-xs">
+          💎 سياسة الأسعار والطلب الشفافة
+        </span>
+        <h2 class="font-aref text-3xl sm:text-4xl text-[#3A2E2E] font-normal">
+          الأسعار متفاوته وتعتمد على حجم البوكيه والتخصيص
+        </h2>
+        <p class="text-xs sm:text-sm text-[#7D7272] leading-relaxed font-medium">
+          جميع بوكيهاتنا مصنوعة يدوياً 100% بحب واهتمام، وتحدد التكلفة النهائية بدقة بناءً على حجم البوكيه، عدد الورود، نوع التغليف، ورسالة الكارت المجاني المطلوبة عند إتمام الطلب عبر الواتساب.
+        </p>
+      </div>
+
+      <!-- 3 Size Tier Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-right">
+        
+        <!-- Card 1: Small -->
+        <div class="bg-[#FFF9F7] rounded-2xl p-6 border border-[#F2E7E9] shadow-xs hover:shadow-md transition-all space-y-3 text-center">
+          <div class="w-12 h-12 rounded-full bg-[#FCE7F0] text-[#703A41] font-bold flex items-center justify-center mx-auto text-lg">
+            🌸
+          </div>
+          <h3 class="font-bold text-lg text-[#3A2E2E]">بوكيهات صغيرة</h3>
+          <p class="text-xs text-[#7D7272]">تصميمات بسيطة ورقيقة (وردة واحدة أو ثنائي ناعم) تناسب الإهداءات الشخصية السريعة.</p>
+          <div class="pt-3 border-t border-[#F2E7E9]">
+            <span class="text-xs font-bold text-[#884952]">تبدأ من 150 جنيه</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Medium (Highlighted) -->
+        <div class="bg-gradient-to-b from-[#FCE7F0]/80 to-[#FFF9F7] rounded-2xl p-6 border-2 border-[#D98FA5] shadow-md hover:shadow-lg transition-all space-y-3 text-center relative transform md:-translate-y-2">
+          <span class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#884952] text-white text-[10px] font-bold px-3 py-0.5 rounded-full shadow-xs">
+            الأكثر طلباً 🔥
+          </span>
+          <div class="w-12 h-12 rounded-full bg-white text-[#703A41] font-bold flex items-center justify-center mx-auto text-lg shadow-xs">
+            💐
+          </div>
+          <h3 class="font-bold text-lg text-[#3A2E2E]">بوكيهات متوسطة</h3>
+          <p class="text-xs text-[#7D7272]">التوازن المثالي بين الفخامة والحجم المميز لأعياد الميلاد والتخرج والتكريمات.</p>
+          <div class="pt-3 border-t border-[#F2E7E9]">
+            <span class="text-xs font-bold text-[#884952]">تبدأ من 250 جنيه</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Large -->
+        <div class="bg-[#FFF9F7] rounded-2xl p-6 border border-[#F2E7E9] shadow-xs hover:shadow-md transition-all space-y-3 text-center">
+          <div class="w-12 h-12 rounded-full bg-[#FCE7F0] text-[#703A41] font-bold flex items-center justify-center mx-auto text-lg">
+            👑
+          </div>
+          <h3 class="font-bold text-lg text-[#3A2E2E]">بوكيهات كبيرة ملَكية</h3>
+          <p class="text-xs text-[#7D7272]">تصميمات ضخمة وفاخرة جداً مع دباديب التخرج وكروت الإهداء الخاصة للمناسبات الملكية.</p>
+          <div class="pt-3 border-t border-[#F2E7E9]">
+            <span class="text-xs font-bold text-[#884952]">تبدأ من 400 جنيه</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Note -->
+      <div class="bg-[#FFF9F7] p-4 rounded-2xl border border-[#F2E7E9] text-xs text-[#703A41] font-bold max-w-xl mx-auto">
+        💡 تنويه: يتم تأكيد التكلفة النهائية وميعاد التوصيل فور إرسال خياراتك عبر الواتساب.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 8. Interactive FAQ Accordion Section -->
+  <section id="faqs" class="py-8 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+    <div class="text-center mb-8 sm:mb-10">
+      <h2 class="text-2xl sm:text-3xl font-bold text-brand-900 mb-2">الأسئلة الشائعة</h2>
+      <p class="text-gray-600 font-medium text-sm">كل ما تحتاجين معرفته عن الطلب والتفاصيل</p>
+    </div>
+
+    <div id="faqContainer" class="space-y-4">
+      <!-- FAQ Items loaded by JS -->
+    </div>
+  </section>
+
+  <!-- 9. Real Customer Reviews Section -->
+  <section id="reviews" class="py-8 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center max-w-xl mx-auto mb-8 sm:mb-12">
+      <h2 class="text-2xl sm:text-3xl font-black text-gray-900 mb-2">ريفيوهات وآراء بنوتاتنا 💖</h2>
+      <p class="text-gray-600 font-medium text-sm">رسائل ورأي عميلاتنا الحقيقيات وفرحتهم بالبوكيهات 🌸</p>
+    </div>
+
+    <!-- Real Review Cards Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Review 1 -->
+      <div onclick="openReviewModal('public/reviews/review1.jpg', 'شغلك كله بيخطف قلبي والله مش بوكيهات التخرج بس ❤️')" class="bg-white rounded-3xl overflow-hidden border border-brand-200/80 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group flex flex-col">
+        <div class="relative bg-gray-900 overflow-hidden flex items-center justify-center p-2">
+          <img src="public/reviews/review1.jpg" alt="ريفيو بوكيهات التخرج" class="w-full h-auto max-h-56 object-contain rounded-2xl group-hover:scale-105 transition-all duration-500">
+          <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-1 backdrop-blur-xs">
+            <span>تكبير الصورة 🔍</span>
+          </div>
+        </div>
+        <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+          <div class="flex items-center gap-1 text-amber-400 text-sm">★★★★★</div>
+          <p class="text-xs text-gray-800 font-bold leading-relaxed">"شغلك كله بيخطف قلبي والله مش بوكيهات التخرج بس ❤️"</p>
+          <span class="text-[10px] text-brand-500 font-semibold block">رسالة وتساب حقيقية 💬</span>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div onclick="openReviewModal('public/reviews/review2.jpg', 'مبسوطه جدا تحفه بجددد ❤️')" class="bg-white rounded-3xl overflow-hidden border border-brand-200/80 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group flex flex-col">
+        <div class="relative bg-gray-900 overflow-hidden flex items-center justify-center p-2">
+          <img src="public/reviews/review2.jpg" alt="ريفيو انستجرام" class="w-full h-auto max-h-56 object-contain rounded-2xl group-hover:scale-105 transition-all duration-500">
+          <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-1 backdrop-blur-xs">
+            <span>تكبير الصورة 🔍</span>
+          </div>
+        </div>
+        <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+          <div class="flex items-center gap-1 text-amber-400 text-sm">★★★★★</div>
+          <p class="text-xs text-gray-800 font-bold leading-relaxed">"مبسوطه جدا تحفه بجددد ❤️"</p>
+          <span class="text-[10px] text-brand-500 font-semibold block">رسالة انستجرام حقيقية 📸</span>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div onclick="openReviewModal('public/reviews/review3.jpg', 'بصراحه عمر شغلك ما فشل أنه يبهرنى تبارك الرحمن ❤️')" class="bg-white rounded-3xl overflow-hidden border border-brand-200/80 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group flex flex-col">
+        <div class="relative bg-gray-900 overflow-hidden flex items-center justify-center p-2">
+          <img src="public/reviews/review3.jpg" alt="ريفيو ابهار الشغل" class="w-full h-auto max-h-56 object-contain rounded-2xl group-hover:scale-105 transition-all duration-500">
+          <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-1 backdrop-blur-xs">
+            <span>تكبير الصورة 🔍</span>
+          </div>
+        </div>
+        <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+          <div class="flex items-center gap-1 text-amber-400 text-sm">★★★★★</div>
+          <p class="text-xs text-gray-800 font-bold leading-relaxed">"بصراحه عمر شغلك ما فشل أنه يبهرنى تبارك الرحمن ❤️"</p>
+          <span class="text-[10px] text-brand-500 font-semibold block">رسالة وتساب حقيقية 💬</span>
+        </div>
+      </div>
+
+      <!-- Review 4 -->
+      <div onclick="openReviewModal('public/reviews/review4.jpg', 'وصل أهو تحفه يا رورو تسلم ايدك والبارفيوم تحفه تحفه 😚 ريحتها شقلبت البيت وبجد شكله كيوت بجد 🥺💖')" class="bg-white rounded-3xl overflow-hidden border border-brand-200/80 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group flex flex-col">
+        <div class="relative bg-gray-900 overflow-hidden flex items-center justify-center p-2">
+          <img src="public/reviews/review4.jpg" alt="ريفيو البوكيه مع البرفيوم" class="w-full h-auto max-h-56 object-contain rounded-2xl group-hover:scale-105 transition-all duration-500">
+          <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-1 backdrop-blur-xs">
+            <span>تكبير الصورة 🔍</span>
+          </div>
+        </div>
+        <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+          <div class="flex items-center gap-1 text-amber-400 text-sm">★★★★★</div>
+          <p class="text-xs text-gray-800 font-bold leading-relaxed">"وصل أهو تحفه يا رورو تسلم ايدك والبارفيوم تحفه تحفه 😚 ريحتها شقلبت البيت وبجد شكله كيوت بجد 🥺💖"</p>
+          <span class="text-[10px] text-brand-500 font-semibold block">تطبيق وصورة حقيقية من عميلة 💐</span>
+        </div>
+      </div>
+
+      <!-- Review 5 -->
+      <div onclick="openReviewModal('public/reviews/review5.jpg', 'شغلك وااااو ماشاء الله 😍❤️')" class="bg-white rounded-3xl overflow-hidden border border-brand-200/80 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group flex flex-col">
+        <div class="relative bg-gray-900 overflow-hidden flex items-center justify-center p-2">
+          <img src="public/reviews/review5.jpg" alt="ريفيو ستاتس وتساب" class="w-full h-auto max-h-56 object-contain rounded-2xl group-hover:scale-105 transition-all duration-500">
+          <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-1 backdrop-blur-xs">
+            <span>تكبير الصورة 🔍</span>
+          </div>
+        </div>
+        <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+          <div class="flex items-center gap-1 text-amber-400 text-sm">★★★★★</div>
+          <p class="text-xs text-gray-800 font-bold leading-relaxed">"شغلك وااااو ماشاء الله 😍❤️"</p>
+          <span class="text-[10px] text-brand-500 font-semibold block">ستاتس وتساب حقيقي 💬</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 10. Footer -->
+  <footer class="mt-auto bg-gray-900 text-white pt-12 pb-8 border-t-4 border-brand-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+      
+      <div class="space-y-4">
+        <div class="flex items-center gap-2">
+          <span class="text-2xl">🌸</span>
+          <span class="text-xl font-black">سوفتي كرافتس</span>
+        </div>
+        <p class="text-xs text-gray-400 leading-relaxed font-medium">
+          بوكيهات ورد مصممة يدوياً من سلك القطيفة عالية الجودة. ورد مبيدبلش ومشاعر مش بتنتهي 💖
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-sm font-bold text-brand-300 mb-4">روابط سريعة</h4>
+        <ul class="space-y-2 text-xs font-semibold text-gray-400">
+          <li><a href="#" class="hover:text-white transition-colors">الرئيسية</a></li>
+          <li><a href="#categories" class="hover:text-white transition-colors">الأقسام</a></li>
+          <li><a href="#products" class="hover:text-white transition-colors">البوكيهات</a></li>
+          <li><a href="#faqs" class="hover:text-white transition-colors">الأسئلة الشائعة</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-sm font-bold text-brand-300 mb-4">تواصل معنا</h4>
+        <ul class="space-y-2 text-xs font-semibold text-gray-400">
+          <li>💬 واتساب: <a href="https://wa.me/201065081331" class="text-white hover:underline">01065081331</a></li>
+          <li>📍 التوصيل: متوفر لجميع المحافظات</li>
+          <li>🎁 التغليف: كارت إهداء مجاني مع كل طلب</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-sm font-bold text-brand-300 mb-4">تواصل اجتماعي</h4>
+        <div class="flex items-center gap-3">
+          <a href="https://wa.me/201065081331" target="_blank" class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-lg hover:bg-emerald-500 transition-all">💬</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 text-center text-xs text-gray-500 border-t border-gray-800 pt-6">
+      © 2026 سوفتي كرافتس (SOFTY FLOWERS) - جميع الحقوق محفوظة 🌸
+    </div>
+  </footer>
+
+  <!-- Cart Drawer Overlay & Slide Modal -->
+  <div id="cartModal" class="fixed inset-0 z-50 hidden" style="display: none;">
+    <div onclick="toggleCartDrawer()" class="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity"></div>
+    
+    <div class="absolute inset-y-0 left-0 max-w-full flex">
+      <div class="w-screen max-w-md bg-white shadow-2xl flex flex-col">
+        
+        <!-- Cart Header -->
+        <div class="p-6 border-b border-gray-100 flex items-center justify-between bg-brand-50">
+          <div class="flex items-center gap-2">
+            <span class="text-xl">🛍️</span>
+            <h3 class="text-lg font-black text-gray-900">سلة المشتريات</h3>
+          </div>
+          <button onclick="toggleCartDrawer()" class="p-2 text-gray-400 hover:text-gray-600 rounded-full hover:bg-white transition-all font-bold">✕</button>
+        </div>
+
+        <!-- Cart Items List -->
+        <div id="cartItemsContainer" class="flex-1 overflow-y-auto p-6 space-y-4">
+          <!-- Injected JS -->
+        </div>
+
+        <!-- Cart Footer / Checkout -->
+        <div class="p-6 border-t border-gray-100 bg-white space-y-4">
+          <div class="flex justify-between items-center text-sm font-bold text-gray-900">
+            <span>الإجمالي:</span>
+            <span id="cartTotalPrice" class="text-xl font-black text-brand-600">0 جنيه</span>
+          </div>
+
+          <div class="p-3 bg-brand-50 rounded-2xl text-xs text-brand-700 font-semibold flex items-center gap-2">
+            <span>🎁</span>
+            <span>تغليف كرافت وكارت إهداء مجاني مع كل طلب!</span>
+          </div>
+
+          <button onclick="checkoutWhatsApp()" class="w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm rounded-2xl shadow-lg transition-all flex items-center justify-center gap-2">
+            <span>إتمام الطلب عبر الواتساب</span>
+            <span class="text-lg">💬</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Bottom Sticky Bar (Rules: Minimum height 48px, thumb reach, sticky at bottom on mobile) -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-xl border-t border-[#F2E7E9] px-4 py-3 shadow-2xl flex items-center justify-between gap-3">
+    <a href="#products" class="flex-1 min-h-[48px] bg-[#884952] hover:bg-[#703A41] active:scale-[0.98] text-white font-bold text-xs sm:text-sm rounded-2xl flex items-center justify-center gap-2 shadow-md">
+      <span>تصفحي البوكيهات</span>
+      <span>🌸</span>
+    </a>
+    <a href="https://wa.me/201065081331?text=%D9%8A%D8%A7%20%D9%87%D9%84%D8%A7%20Softy%20Crafts%20%F0%9F%8C%B8%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%A8%D9%88%D9%83%D9%8A%D9%87%20%D8%AE%D8%A7%D8%B5" target="_blank" class="min-h-[48px] px-4 bg-emerald-600 hover:bg-emerald-700 active:scale-[0.98] text-white font-bold text-xs rounded-2xl flex items-center justify-center gap-1 shadow-md" aria-label="واتساب">
+      <span>واتساب</span>
+      <span class="text-base">💬</span>
+    </a>
+  </div>
+
+  <!-- Quick View Modal -->
+  <div id="quickViewModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4" style="display: none;">
+    <div onclick="closeQuickView()" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+    <div class="relative bg-white rounded-3xl max-w-2xl w-full p-6 md:p-8 shadow-2xl z-10 max-h-[90vh] overflow-y-auto">
+      <button onclick="closeQuickView()" class="absolute top-4 left-4 p-2 text-gray-400 hover:text-gray-600 rounded-full bg-gray-100 font-bold">✕</button>
+      <div id="quickViewContent">
+        <!-- JS injected content -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Review Image Lightbox Modal -->
+  <div id="reviewModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4" style="display: none;">
+    <div onclick="closeReviewModal()" class="absolute inset-0 bg-black/80 backdrop-blur-md"></div>
+    <div class="relative bg-white rounded-3xl max-w-lg w-full p-6 shadow-2xl z-10 text-center space-y-4">
+      <button onclick="closeReviewModal()" class="absolute top-4 left-4 p-2 text-gray-500 hover:text-gray-900 rounded-full bg-gray-100 font-bold text-sm">✕</button>
+      <img id="reviewModalImg" src="" class="w-full max-h-[70vh] object-contain rounded-2xl mx-auto shadow-md" />
+      <p id="reviewModalQuote" class="text-xs text-gray-800 font-extrabold leading-relaxed px-2"></p>
+    </div>
+  </div>
+
+  <!-- JavaScript State & Logic -->
+  <script>
+    const PRODUCTS = [
+      {
+        id: "p1",
+        name: "بوكيه كرافتس الكبير الملكي بالدبدوب الوردية",
+        category: "large",
+        price: 150,
+        oldPrice: 180,
+        rating: 5.0,
+        badge: "بوكيه كبير 👑",
+        image: "public/WhatsApp_Image_2026-07-25_at_12.03.07_202607251434.jpeg",
+        description: "بوكيه كبير فاخر ومصنوع يدويًا 100% من سلك القطيفة الـ Pipe Cleaners العالي الجودة، يضم ورد التوليب والروز الوردية والزهور اللؤلؤية مع دبدوب تخرج قطيفة لطيف ورسالة إهداء مخصصة."
+      },
+      {
+        id: "p2",
+        name: "بوكيه التخرج والدمية الوردية الكرافت",
+        category: "medium",
+        price: 150,
+        oldPrice: 180,
+        rating: 4.9,
+        badge: "هدية تخرج 🎓",
+        image: "public/WhatsApp_Image_2026-07-25_at_12.03.07_202607251425.jpeg",
+        description: "بوكيه تخرج هاند ميد خاص ومميز جداً يشمل وردة توليب قطيفة ودبدوب تخرج قطيفة لطيف مع كارت تخرج خاص ومغلف بتغليف كرافت أنيق."
+      },
+      {
+        id: "p3",
+        name: "بوكيه التوليب الوردي مع كارت أشرقت بالتخرج",
+        category: "medium",
+        price: 150,
+        oldPrice: 180,
+        rating: 5.0,
+        badge: "جديد 🎓",
+        image: "public/products/prod_new1.jpg",
+        description: "بوكيه تخرج وردي رقيق يجمع بين التوليب والزهر الوردي باللؤلؤ مع كارت إهداء خاص للخرجين وشريط ساتان فاخر."
+      },
+      {
+        id: "p4",
+        name: "بوكيه التوليب السماوي والزهور اللؤلؤية (Bloom)",
+        category: "medium",
+        price: 150,
+        oldPrice: 180,
+        rating: 4.9,
+        badge: "جديد 🌸",
+        image: "public/products/prod_new2.jpg",
+        description: "تنسيق سماوي ساحر مبهج مع كارت كرافت Bloom Where You Are Planted وزهور قطيفة رقيقة مصنوعة بكل حب."
+      },
+      {
+        id: "p5",
+        name: "بوكيه الورد العنابي بالستان واللؤلؤ (Flowers Art)",
+        category: "large",
+        price: 150,
+        oldPrice: 180,
+        rating: 5.0,
+        badge: "الأكثر طلباً 👑",
+        image: "public/products/prod_new3.jpg",
+        description: "بوكيه عنابي ملكي فاخر مغلف بتغليف حريري عتيق وشريط ستان فاخر مع زهور قطيفة عنابية ووردي لؤلؤي."
+      },
+      {
+        id: "p6",
+        name: "بوكيه الورد العنابي الفاخر (Flowers Art Classic)",
+        category: "medium",
+        price: 150,
+        oldPrice: 180,
+        rating: 4.9,
+        badge: "الأكثر طلباً 🔥",
+        image: "public/WhatsApp_Image_2026-07-25_at_12.03.07_202607251429.jpeg",
+        description: "بوكيه متوسط راقٍ جداً بتغليف عنابي لامع وشريط ستان، هديتك متميزة 100% مع كارت إهداء كرافت شيك."
+      },
+      {
+        id: "p7",
+        name: "بوكيه التوليب الوردي مع الدبدوب بالصندوق",
+        category: "medium",
+        price: 150,
+        oldPrice: 180,
+        rating: 5.0,
+        badge: "جديد 💖",
+        image: "public/products/prod_new4.jpg",
+        description: "بوكيه تخرج أنيق يشمل دبدوب تخرج بالقبّعة وورد توليب قطيفة مع كارت إهداء خاص وتغليف لؤلؤي فريد."
+      },
+      {
+        id: "p8",
+        name: "بوكيه التوليب الوردي المفرد والمزدوج",
+        category: "small",
+        price: 150,
+        oldPrice: 180,
+        rating: 4.9,
+        badge: "وردة واحدة 🌸",
+        image: "public/products/prod_new5.jpg",
+        description: "وردة قطيفة واحدة أو ثنائي توليب ناعم بتغليف وردي رقيق وشريط ستان حريري."
+      },
+      {
+        id: "p9",
+        name: "بوكيه التوليب الوردي مع كارت الفنون الجميل",
+        category: "medium",
+        price: 150,
+        oldPrice: 180,
+        rating: 5.0,
+        badge: "تصميم حصري ✨",
+        image: "public/products/prod_new6.jpg",
+        description: "بوكيه قطيفة وردي مبهج بتأطير شفاف وأشرطة لؤلؤية مع كارت إهداء رقيق Flowers Art."
+      },
+      {
+        id: "p10",
+        name: "بوكيه التوليب الوردي المزدوج الكلاسيكي",
+        category: "small",
+        price: 150,
+        oldPrice: 180,
+        rating: 5.0,
+        badge: "بتبدأ من 150 💖",
+        image: "public/WhatsApp_Image_2026-07-25_at_12.03.07_202607251431.jpeg",
+        description: "بوكيه ورد التوليب الوردي الناعم، رقيق جداً ومصنوع بحب ليدوم للأبد دون أن يذبل."
+      }
+    ];
+
+    const FAQS = [
+      { q: "❓ البوكيه ده طبيعي ولا هاند ميد؟", a: "كل البوكيهات عندنا هاند ميد 100%، مصنوعة من سلك القطيفة Pipe Cleaners عالية الجودة بخامات ممتازة." },
+      { q: "❓ البوكيه بيفضل قد إيه؟", a: "على عكس الورد الطبيعي، بوكيهات سلك القطيفة (Forever Bloom) بتفضل بنفس شكلها وألوانها لسنين جاية من غير ما تذبل أو تتأثر!" },
+      { q: "❓ الأسعار بتبدأ من كام؟", a: "الأسعار متفاوتة ومناسبة للجميع:\n• 🌸 بوكيهات صغيرة: بتبدأ من 150 جنيه\n• 💐 بوكيهات متوسطة: بتبدأ من 250 جنيه\n• 👑 بوكيهات كبيرة: بتبدأ من 400 جنيه\n• ✨ وفيه تصميمات مخصصة حسب طلبك." },
+      { q: "❓ أقدر أطلب بوكيه بتصميم خاص؟", a: "أكيد، كل وردة وكل ورقة شجر مصنوعة بإيدين محترفة وباهتمام كامل بأدق التفاصيل، ونقدر ننفذ لك أي تصميم بالألوان والشكل المطلوب." },
+      { q: "❓ ينفع أضيف اسم أو رسالة؟", a: "أيوه، تقدر تضيف اسم، رسالة، أو كارت إهداء مجاني مع الطلب لتكون هديتك متميزة 100%." },
+      { q: "❓ التوصيل متاح؟", a: "أيوه، بنوفر التوصيل لجميع المحافظات والمناطق، وتكلفة الشحن بتظهر لك قبل تأكيد الطلب." }
+    ];
+
+    let cart = [];
+    let wishlist = [];
+    let currentCategoryFilter = 'all';
+
+    // Initialize App immediately and on DOMContentLoaded
+    function initApp() {
+      renderProducts();
+      renderFAQs();
+      initHeroSlideshow();
+      
+      // Prevent JIT layout-shift scrolling bug
+      if (window.location.hash) {
+        setTimeout(() => {
+          const el = document.querySelector(window.location.hash);
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 250);
+      } else {
+        window.scrollTo(0, 0);
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initApp);
+    } else {
+      initApp();
+    }
+
+    function initHeroSlideshow() {
+      const slides = document.querySelectorAll('#heroSlideshow .hero-slide');
+      if (slides.length === 0) return;
+      let currentSlide = 0;
+      setInterval(() => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+      }, 4000);
+    }
+
+    function renderProducts(searchQuery = '') {
+      const grid = document.getElementById('productGrid');
+      grid.innerHTML = '';
+
+      const filtered = PRODUCTS.filter(p => {
+        const matchesCategory = currentCategoryFilter === 'all' || p.category === currentCategoryFilter;
+        const matchesSearch = p.name.includes(searchQuery) || p.description.includes(searchQuery);
+        return matchesCategory && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `<div class="col-span-full text-center py-12 text-gray-500 font-bold">لا توجد بوكيهات مطابقة للبحث حالياً 🌸</div>`;
+        return;
+      }
+
+      filtered.forEach(product => {
+        const isWishlisted = wishlist.includes(product.id);
+        const card = document.createElement('div');
+        card.className = "bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-brand-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col group";
+        
+        card.innerHTML = `
+          <div class="relative h-40 sm:h-64 overflow-hidden bg-gray-50">
+            <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+            ${product.badge ? `<span class="absolute top-2 right-2 sm:top-3 sm:right-3 bg-brand-500 text-white text-[9px] sm:text-[10px] font-bold px-2 sm:px-3 py-0.5 sm:py-1 rounded-full">${product.badge.replace(/[^أ-يa-zA-Z0-9\s]/g, '')}</span>` : ''}
+            
+            <button onclick="toggleWishlist('${product.id}')" class="absolute top-2 left-2 sm:top-3 sm:left-3 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/90 flex items-center justify-center text-gray-400 shadow-sm hover:text-brand-500 transition-all">
+              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 ${isWishlisted ? 'fill-brand-500 text-brand-500' : 'fill-none'}" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+            </button>
+          </div>
+
+          <div class="p-3 sm:p-5 flex-1 flex flex-col justify-between space-y-2 sm:space-y-3">
+            <div>
+              <h3 class="text-[11px] sm:text-sm font-bold text-brand-900 line-clamp-2 leading-snug mb-1">${product.name}</h3>
+              <span class="text-[10px] sm:text-xs text-gray-500 font-medium">⭐ ${product.rating} • صنع يدوياً</span>
+            </div>
+
+            <div class="space-y-2 pt-2 sm:pt-3 border-t border-[#F2E7E9]">
+              <span class="block text-center text-[10px] sm:text-[11px] font-bold text-[#884952] bg-[#FCE7F0] rounded-full py-1 px-2">
+                يبدأ من ${product.price} جنيه
+              </span>
+              <button onclick="openQuickView('${product.id}')" class="w-full min-h-[40px] sm:min-h-[46px] py-2 sm:py-2.5 bg-[#884952] hover:bg-[#703A41] active:scale-[0.98] text-white font-bold text-[10px] sm:text-xs rounded-xl sm:rounded-2xl shadow-sm transition-all flex items-center justify-center gap-1">
+                <span>اطلبي الآن</span>
+                <span>💬</span>
+              </button>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    function filterCategory(cat) {
+      currentCategoryFilter = cat;
+      document.querySelectorAll('.cat-filter-btn').forEach(btn => {
+        btn.className = "cat-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-white text-gray-700 hover:bg-brand-50 border border-brand-200 transition-all";
+      });
+      const activeBtn = document.getElementById(`btn-${cat}`);
+      if (activeBtn) {
+        activeBtn.className = "cat-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-brand-500 text-white shadow-sm transition-all";
+      }
+      renderProducts();
+
+      // Smooth scroll to products section so the customer immediately sees the filtered bouquets
+      setTimeout(() => {
+        const el = document.getElementById('products');
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 50);
+    }
+
+    function handleSearch(val) {
+      renderProducts(val.trim());
+    }
+
+    function addToCart(productId) {
+      const prod = PRODUCTS.find(p => p.id === productId);
+      if (!prod) return;
+
+      const existing = cart.find(item => item.id === productId);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        cart.push({ ...prod, quantity: 1 });
+      }
+
+      updateCartUI();
+      toggleCartDrawer(true);
+    }
+
+    function updateCartUI() {
+      const countEl = document.getElementById('cartCount');
+      const container = document.getElementById('cartItemsContainer');
+      const totalPriceEl = document.getElementById('cartTotalPrice');
+
+      const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+      countEl.innerText = totalItems;
+
+      if (cart.length === 0) {
+        container.innerHTML = `<div class="text-center py-12 text-gray-400 font-bold">السلة فارغة حالياً 🌸</div>`;
+        totalPriceEl.innerText = '0 جنيه';
+        return;
+      }
+
+      let total = 0;
+      container.innerHTML = '';
+
+      cart.forEach(item => {
+        total += item.price * item.quantity;
+        const itemEl = document.createElement('div');
+        itemEl.className = "flex items-center gap-4 p-3 rounded-2xl bg-gray-50 border border-gray-100";
+        itemEl.innerHTML = `
+          <img src="${item.image}" class="w-16 h-16 rounded-xl object-cover">
+          <div class="flex-1">
+            <h4 class="text-xs font-black text-gray-900 line-clamp-1">${item.name}</h4>
+            <span class="text-xs font-bold text-brand-600">${item.price} جنيه</span>
+            <div class="flex items-center gap-2 mt-2">
+              <button onclick="changeQty('${item.id}', -1)" class="w-6 h-6 rounded-lg bg-white border border-gray-200 text-xs font-bold">-</button>
+              <span class="text-xs font-black">${item.quantity}</span>
+              <button onclick="changeQty('${item.id}', 1)" class="w-6 h-6 rounded-lg bg-white border border-gray-200 text-xs font-bold">+</button>
+            </div>
+          </div>
+          <button onclick="removeItem('${item.id}')" class="text-rose-500 text-xs font-bold p-1">✕</button>
+        `;
+        container.appendChild(itemEl);
+      });
+
+      totalPriceEl.innerText = `${total} جنيه`;
+    }
+
+    function changeQty(id, delta) {
+      const item = cart.find(i => i.id === id);
+      if (!item) return;
+      item.quantity += delta;
+      if (item.quantity <= 0) {
+        cart = cart.filter(i => i.id !== id);
+      }
+      updateCartUI();
+    }
+
+    function removeItem(id) {
+      cart = cart.filter(i => i.id !== id);
+      updateCartUI();
+    }
+
+    function toggleCartDrawer(forceOpen = false) {
+      const modal = document.getElementById('cartModal');
+      if (!modal) return;
+      if (forceOpen || modal.style.display === 'none' || modal.classList.contains('hidden')) {
+        modal.style.display = 'block';
+        modal.classList.remove('hidden');
+      } else {
+        modal.style.display = 'none';
+        modal.classList.add('hidden');
+      }
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      if (!menu) return;
+      if (menu.style.display === 'none' || menu.classList.contains('hidden')) {
+        menu.style.display = 'block';
+        menu.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      } else {
+        menu.style.display = 'none';
+        menu.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function toggleWishlist(id) {
+      if (wishlist.includes(id)) {
+        wishlist = wishlist.filter(w => w !== id);
+      } else {
+        wishlist.push(id);
+      }
+      const wc = document.getElementById('wishlistCount');
+      if (wc) wc.innerText = wishlist.length;
+      renderProducts();
+    }
+
+    function toggleWishlistModal() {
+      alert('قائمة المفضلة: ' + wishlist.length + ' منتج 💖');
+    }
+
+    function renderFAQs() {
+      const container = document.getElementById('faqContainer');
+      container.innerHTML = '';
+      FAQS.forEach((faq, index) => {
+        const item = document.createElement('div');
+        item.className = "bg-white rounded-2xl border border-brand-200/70 overflow-hidden shadow-sm";
+        item.innerHTML = `
+          <button onclick="toggleFaq(${index})" class="w-full p-5 text-right font-extrabold text-sm text-gray-900 flex justify-between items-center hover:bg-brand-50 transition-all">
+            <span>${faq.q}</span>
+            <span id="faq-icon-${index}" class="text-brand-500 font-bold transition-transform">▼</span>
+          </button>
+          <div id="faq-ans-${index}" class="hidden p-5 pt-0 text-xs text-gray-600 font-medium leading-relaxed border-t border-gray-50 whitespace-pre-line" style="display: none;">
+            ${faq.a}
+          </div>
+        `;
+        container.appendChild(item);
+      });
+    }
+
+    function toggleFaq(index) {
+      const ans = document.getElementById(`faq-ans-${index}`);
+      const icon = document.getElementById(`faq-icon-${index}`);
+      if (!ans) return;
+      if (ans.style.display === 'none' || ans.classList.contains('hidden')) {
+        ans.style.display = 'block';
+        ans.classList.remove('hidden');
+        if (icon) icon.innerText = '▲';
+      } else {
+        ans.style.display = 'none';
+        ans.classList.add('hidden');
+        if (icon) icon.innerText = '▼';
+      }
+    }
+
+    function openQuickView(id) {
+      const p = PRODUCTS.find(prod => prod.id === id);
+      if (!p) return;
+      const content = document.getElementById('quickViewContent');
+      content.innerHTML = `
+        <div class="space-y-6 text-right" dir="rtl">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+            <div class="relative rounded-2xl overflow-hidden shadow-xs bg-gray-50">
+              <img src="${p.image}" class="w-full h-56 sm:h-72 md:h-80 object-cover rounded-2xl">
+              <span class="absolute top-3 right-3 bg-secondary text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-xs">صنع يدوياً 100%</span>
+            </div>
+
+            <div class="space-y-4">
+              <h3 class="text-xl sm:text-2xl font-bold text-textPrimary">${p.name}</h3>
+              <p class="text-xs text-textSecondary leading-relaxed font-medium">${p.description}</p>
+              
+              <div class="p-4 bg-bgMain rounded-2xl border border-borderSubtle space-y-1">
+                <span class="text-xs text-textSecondary block">السعر المبدئي للبوكيه:</span>
+                <span class="text-2xl sm:text-3xl font-extrabold text-[#703A41]">يبدأ من 150 جنيه</span>
+                <span class="text-[11px] text-textSecondary block pt-1">السعر النهائي يتحدد حسب خيارات الحجم والتخصيص المختارة بالأسفل.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Customization Fields -->
+          <div class="border-t border-borderSubtle pt-6 space-y-5">
+            <h4 class="text-sm font-bold text-textPrimary">تخصيص البوكيه حسب طلبك:</h4>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+              <div>
+                <label class="block font-bold text-textPrimary mb-1.5">حجم البوكيه:</label>
+                <select id="opt-size-${p.id}" class="w-full min-h-[48px] p-3 rounded-input border border-borderSubtle bg-white focus:outline-none focus:border-secondary font-semibold text-sm">
+                  <option value="صغير (يبدأ من 150ج)" selected>صغير (يبدأ من 150ج)</option>
+                  <option value="متوسط (يبدأ من 250ج)">متوسط (يبدأ من 250ج)</option>
+                  <option value="كبير ملكي (يبدأ من 400ج)">كبير ملكي (يبدأ من 400ج)</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block font-bold text-textPrimary mb-1.5">ألوان الورد:</label>
+                <select id="opt-color-${p.id}" class="w-full min-h-[48px] p-3 rounded-input border border-borderSubtle bg-white focus:outline-none focus:border-secondary font-semibold text-sm">
+                  <option value="وردي ناعم" selected>وردي ناعم</option>
+                  <option value="عنابي فاخر">عنابي فاخر</option>
+                  <option value="أزرق وسماوي">أزرق وسماوي</option>
+                  <option value="أبيض ولؤلؤي">أبيض ولؤلؤي</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block font-bold text-textPrimary mb-1.5">نوع التغليف:</label>
+                <select id="opt-wrap-${p.id}" class="w-full min-h-[48px] p-3 rounded-input border border-borderSubtle bg-white focus:outline-none focus:border-secondary font-semibold text-sm">
+                  <option value="كرافت أنيق مع شريط ساتان" selected>كرافت أنيق مع شريط ساتان</option>
+                  <option value="دانتيل ملكي أبيض">دانتيل ملكي أبيض</option>
+                  <option value="أسود فاخر للتخرج">أسود فاخر للتخرج</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block font-bold text-textPrimary mb-1.5">تاريخ التوصيل المطلوب:</label>
+                <input type="date" id="opt-date-${p.id}" class="w-full min-h-[48px] p-3 rounded-input border border-borderSubtle bg-white focus:outline-none focus:border-secondary font-semibold text-sm">
+              </div>
+            </div>
+
+            <div>
+              <label class="block font-bold text-textPrimary text-xs mb-1.5">رسالة كارت الإهداء المجاني:</label>
+              <textarea id="opt-card-${p.id}" rows="2" placeholder="اكتبي رسالتك الجميلة هنا لتوضع داخل كارت الإهداء..." class="w-full p-3 rounded-input border border-borderSubtle bg-white text-xs focus:outline-none focus:border-secondary font-medium"></textarea>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+              <div>
+                <label class="block font-bold text-textPrimary mb-1.5">اسمك الكريم:</label>
+                <input type="text" id="cust-name-${p.id}" placeholder="الاسم بالكامل" class="w-full min-h-[48px] p-3 rounded-input border border-borderSubtle bg-white focus:outline-none focus:border-secondary font-medium">
+              </div>
+
+              <div>
+                <label class="block font-bold text-textPrimary mb-1.5">رقم الهاتف التواصل:</label>
+                <input type="tel" id="cust-phone-${p.id}" placeholder="رقم الهاتف" class="w-full min-h-[48px] p-3 rounded-input border border-borderSubtle bg-white focus:outline-none focus:border-secondary font-medium">
+              </div>
+            </div>
+
+            <div>
+              <label class="block font-bold text-textPrimary text-xs mb-1.5">عنوان التوصيل:</label>
+              <input type="text" id="cust-address-${p.id}" placeholder="المحافظة - المنطقة - الشارع بالتفصيل" class="w-full min-h-[48px] p-3 rounded-input border border-borderSubtle bg-white text-xs focus:outline-none focus:border-secondary font-medium">
+            </div>
+
+            <div class="pt-2">
+              <button onclick="orderSingleViaWhatsApp('${p.id}')" class="w-full min-h-[52px] py-4 px-6 bg-emerald-600 hover:bg-emerald-700 active:scale-[0.98] text-white font-extrabold text-sm rounded-2xl shadow-lg transition-all flex items-center justify-center gap-2">
+                <span>إتمام طلب هذا البوكيه عبر الواتساب</span>
+                <span class="text-base">💬</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+      const modal = document.getElementById('quickViewModal');
+      if (modal) {
+        modal.style.display = 'flex';
+        modal.classList.remove('hidden');
+      }
+    }
+
+    function closeQuickView() {
+      const modal = document.getElementById('quickViewModal');
+      if (modal) {
+        modal.style.display = 'none';
+        modal.classList.add('hidden');
+      }
+    }
+
+    function openReviewModal(imgSrc, quote) {
+      document.getElementById('reviewModalImg').src = imgSrc;
+      document.getElementById('reviewModalQuote').innerText = quote;
+      const modal = document.getElementById('reviewModal');
+      if (modal) {
+        modal.style.display = 'flex';
+        modal.classList.remove('hidden');
+      }
+    }
+
+    function closeReviewModal() {
+      const modal = document.getElementById('reviewModal');
+      if (modal) {
+        modal.style.display = 'none';
+        modal.classList.add('hidden');
+      }
+    }
+
+    function orderSingleViaWhatsApp(productId) {
+      const p = PRODUCTS.find(prod => prod.id === productId);
+      if (!p) return;
+
+      const size = document.getElementById(`opt-size-${p.id}`)?.value || "متوسط";
+      const color = document.getElementById(`opt-color-${p.id}`)?.value || "وردي ناعم";
+      const wrap = document.getElementById(`opt-wrap-${p.id}`)?.value || "كرافت أنيق";
+      const date = document.getElementById(`opt-date-${p.id}`)?.value || "حسب الاتفاق";
+      const cardMsg = document.getElementById(`opt-card-${p.id}`)?.value || "بدون كارت إهداء";
+      const custName = document.getElementById(`cust-name-${p.id}`)?.value || "غير محدد";
+      const custPhone = document.getElementById(`cust-phone-${p.id}`)?.value || "غير محدد";
+      const custAddr = document.getElementById(`cust-address-${p.id}`)?.value || "غير محدد";
+
+      const text = `يا هلا Softy Crafts 🌸
+
+أود إتمام طلب البوكيه التالي:
+
+• البوكيه: ${p.name}
+• الحجم: ${size}
+• ألوان الورد: ${color}
+• نوع التغليف: ${wrap}
+• العدد: 1
+• كارت الإهداء: ${cardMsg}
+• ميعاد التوصيل: ${date}
+
+السعر المبدئي: يبدأ من ${p.price} جنيه
+
+الاسم: ${custName}
+رقم الهاتف: ${custPhone}
+عنوان التوصيل: ${custAddr}
+
+برجاء تأكيد السعر النهائي والميعاد 💖`;
+
+      const encoded = encodeURIComponent(text);
+      window.open(`https://wa.me/201065081331?text=${encoded}`, '_blank');
+    }
+
+    function checkoutWhatsApp() {
+      if (cart.length === 0) {
+        alert('السلة فارغة! اختاري بوكيه أولاً 🌸');
+        return;
+      }
+      let text = "يا هلا Softy Crafts 🌸 أود استفسار وإتمام طلب البوكيهات التالية:\n\n";
+      let total = 0;
+      cart.forEach((item, i) => {
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+        text += `${i+1}. ${item.name} (عدد ${item.quantity})\n   - السعر المبدئي: يبدأ من ${itemTotal} جنيه\n`;
+      });
+      text += `\nإجمالي السعر المبدئي: يبدأ من ${total} جنيه\nكود الخصم: SOFTY15\n\nبرجاء تأكيد التوصيل والميعاد 💖`;
+      const encoded = encodeURIComponent(text);
+      window.open(`https://wa.me/201065081331?text=${encoded}`, '_blank');
+    }
+
+    function copyPromoCode() {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText("SOFTY15");
+      } else {
+        const tempInput = document.createElement('input');
+        tempInput.value = "SOFTY15";
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+      }
+      alert("تم نسخ كود الخصم SOFTY15 بنجاح! 🎁");
+    }
+  </script>
+
+  <!-- Duplicate sticky bar removed - using the one at line 817 -->
+
+</body>
+</html>
